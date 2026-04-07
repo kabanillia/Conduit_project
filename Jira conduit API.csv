@@ -1,0 +1,41 @@
+Summary,Issue key,Issue id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project lead id,Project description,Priority,Resolution,Assignee,Assignee Id,Reporter,Reporter Id,Creator,Creator Id,Created,Updated,Last Viewed,Resolved,Due date,Votes,Description,Environment,Watchers,Watchers Id,Original estimate,Remaining Estimate,Time Spent,Work Ratio,Σ Original Estimate,Σ Remaining Estimate,Σ Time Spent,Security Level,Inward issue link (Relates),Outward issue link (Relates),Outward issue link (Relates),Outward issue link (Relates),Custom field (Goals),Custom field (Issue color),Custom field (Rank),Sprint,Custom field (Start date),Custom field (Story point estimate),Custom field (Team),Custom field (Vulnerability),Custom field (development),Status Category,Status Category Changed
+"Missing authorization check leading to successful deletion of another user's article on the ""Delete an article"" endpoint.",CA-5,10626,Bug,To Do,CA,Conduit API,software,Illia Kabanchuk,712020:ead4aa1e-861f-4aed-a80d-570a0b9871c4,,Highest,,,,Illia Kabanchuk,712020:ead4aa1e-861f-4aed-a80d-570a0b9871c4,Illia Kabanchuk,712020:ead4aa1e-861f-4aed-a80d-570a0b9871c4,27/лют./26 8:36 PM,28/лют./26 12:50 AM,03/бер./26 9:22 PM,,,0,"*Steps to reproduce:*
+
+# Go to ""[+Conduit+|https://conduit.mate.academy/]""
+# Register two different users
+# As User A, create an article and save its slug
+# As User B, go to Postman and send a ""Delete an article"" request using User A's slug but User B's token.
+# Observe the status code and the state of the article.
+
+*Expected result:* The server should return a 403 Forbidden status and prevent the deletion of an article by a non-owner user.
+
+*Actual result:* The server returns a 204 No Content status and successfully deletes the article belonging to another user.
+
+*Attachments:*",,Illia Kabanchuk,712020:ead4aa1e-861f-4aed-a80d-570a0b9871c4,,,,,,,,,CA-1,,,,,,0|i000cv:,,,,,,,To Do,27/лют./26 8:36 PM
+"Inconsistent response format for 401 Unauthorized error on the ""Create an article"" endpoint.",CA-4,10593,Bug,To Do,CA,Conduit API,software,Illia Kabanchuk,712020:ead4aa1e-861f-4aed-a80d-570a0b9871c4,,High,,,,Illia Kabanchuk,712020:ead4aa1e-861f-4aed-a80d-570a0b9871c4,Illia Kabanchuk,712020:ead4aa1e-861f-4aed-a80d-570a0b9871c4,27/лют./26 6:46 PM,28/лют./26 12:49 AM,03/бер./26 9:22 PM,,,0,"*Steps to reproduce:*
+
+# Go to ""[Conduit|https://conduit.mate.academy/]"".
+# Go to Postman and try to send a ""Create an article"" request without providing a token in the headers.
+# Observe the response format.
+
+*Expected result:* The server returns a status code 401 Unauthorized and a JSON object with an error message for consistency with other API endpoints.
+
+*Actual result:* The server returns a status code 401 Unauthorized, but the response body contains only Plain Text ""Unauthorized"", which causes parsing errors in automated tests and frontend applications.
+
+*Attachments:* [link|https://drive.usercontent.google.com/download?id=1k5mDORgBKv1zD_gCFuazZc3-KgoBadGk&authuser=0]",,Illia Kabanchuk,712020:ead4aa1e-861f-4aed-a80d-570a0b9871c4,,,,,,,,,CA-1,,,,,,0|i000cn:,,,,,,,To Do,27/лют./26 6:46 PM
+"Missing ""Username"" length validation in Registration API",CA-2,10527,Bug,To Do,CA,Conduit API,software,Illia Kabanchuk,712020:ead4aa1e-861f-4aed-a80d-570a0b9871c4,,Highest,,,,Illia Kabanchuk,712020:ead4aa1e-861f-4aed-a80d-570a0b9871c4,Illia Kabanchuk,712020:ead4aa1e-861f-4aed-a80d-570a0b9871c4,25/лют./26 4:31 PM,01/бер./26 8:05 PM,03/бер./26 9:22 PM,,,0,"*Steps to reproduce:*
+
+# Open Postman
+# Send a POST request to the /api/users endpoint.
+# In the request body, provide a ""Username"" containing 41 symbols
+# Fill other required fields (""Email"", ""Password"") with valid, unique data.
+# [Send] the request and observe the response.
+
+*Expected result:* User is not registered, validation error ""is too long (maximum is 40 characters)"" is shown, status code 422.
+
+*Actual result:* User is registered, status code 201 Created is returned despite 41 symbols in the ""Username"" field.
+
+*Attachments*: [link|https://drive.usercontent.google.com/download?id=1uA3PpcHmfa2zTM7ncrlveD6DvUC1W5gw&authuser=0]",,Illia Kabanchuk,712020:ead4aa1e-861f-4aed-a80d-570a0b9871c4,,,,,,,,,CA-1,,,,,,0|i000c7:,,,,,,,To Do,25/лют./26 4:31 PM
+Postman Practice [Kabanchuk Illia],CA-1,10526,Story,To Do,CA,Conduit API,software,Illia Kabanchuk,712020:ead4aa1e-861f-4aed-a80d-570a0b9871c4,,Medium,,,,Illia Kabanchuk,712020:ead4aa1e-861f-4aed-a80d-570a0b9871c4,Illia Kabanchuk,712020:ead4aa1e-861f-4aed-a80d-570a0b9871c4,25/лют./26 4:19 PM,28/лют./26 12:45 AM,04/бер./26 8:05 PM,,,0,"Link to [EndPoints Checklist|https://docs.google.com/spreadsheets/d/1sjUxRcpPbAp182yCb3spH6YjwYpkPONOu4t5OnLB3oA/edit?usp=sharing]
+Link to [Cheat Sheet Checklist|https://docs.google.com/spreadsheets/d/11fKXxmNTAt2j6bvQWtUkI3OmikZaSjbAfPSZanVENZQ/edit?usp=sharing]
+Link to [Postman collection|https://www.postman.com/kaban-illia-4715937/workspace/postman-practice-illia-kabanchuk/folder/49723205-34d8f992-29a4-4f4f-b87b-f48bfa9703c4?action=share&creator=49723205&ctx=documentation]",,Illia Kabanchuk,712020:ead4aa1e-861f-4aed-a80d-570a0b9871c4,,,,,,,,,,CA-2,CA-5,CA-4,,,0|i000bz:,CA Sprint 1,,,,,,To Do,25/лют./26 4:19 PM

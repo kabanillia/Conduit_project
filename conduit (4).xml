@@ -1,0 +1,1379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S1</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Logged out user</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Home page</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Global Feed</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Article preview</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>&quot;User profile&quot; link</name>
+		<description></description>
+									</section>
+			<section>
+		<name>[Like]  button</name>
+		<description></description>
+									</section>
+			<section>
+		<name>Article information (title and description)</name>
+		<description></description>
+									</section>
+			<section>
+		<name>Tags</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+	</sections>
+			</section>
+			<section>
+		<name>Popular tags</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Tag</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+	</sections>
+			</section>
+			<section>
+		<name>Sign In page</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C71</id>
+				<title>A logged-in user should not be able to access the Sign In page via a direct link.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C72</id>
+				<title>A logged-in user should be redirected to the personal account page after opening Sign In page via a direct link.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+								<sections>
+		<section>
+		<name>&quot;Sign in&quot; form</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>“Email” field</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C1</id>
+				<title>User should not be able to Sign in with unregistered 
+Email</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<steps>1. Click on the &apos;Sign in&apos; link
+2. Enter values that match an invalid email format in the &apos;Email or Username&apos; field. 
+3. Enter valid data into the &apos;Password&apos; field
+4. Click on the [Sign In] button</steps>
+											<expected>Assert an error message indicating that the Email field must be valid format is shown.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C2</id>
+				<title>Email or Username field should contain a placeholder &apos;Enter your username or email&apos;</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<steps>1. Click on the &apos;Sign In&apos; link
+2. Observe the &apos;Email or Username&apos; field</steps>
+											<expected>Placeholder &apos;Enter your username or email&apos; in the &apos;Email or Username&apos; field</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C59</id>
+				<title>The user should not be able to sign in without filling in the Email or Username field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C60</id>
+				<title>User should not be able to Sign in with unregistered Username</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C61</id>
+				<title>The user can log in by entering case-insensitive credentials in the Email or Username field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C66</id>
+				<title>When the user leaves Email or Username field empty, that validation message should be shown: “Email or Username: can’t be blank”</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C68</id>
+				<title>When a user enters a invalid email or username, that validation message should be shown to the user: “User with such email or username not registered.”</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>“Password” field</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C3</id>
+				<title>The password field should mask the input with asterisks.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+											<steps>1. Click on the &apos;Sign in&apos; link
+2. Enter values in the &apos;Password&apos; field
+</steps>
+											<expected>Input should be masked with asterisks.</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C62</id>
+				<title>The user should not be able to log in without filling in the Password field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C63</id>
+				<title>The User should not be able to copy values from the Password field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C64</id>
+				<title>The User should not be able to cut values from the Password field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C65</id>
+				<title>The User should be able to paste data into the Password field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C67</id>
+				<title>When the user leaves Password field empty, that validation message should be shown: “Password: can’t be blank”</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C69</id>
+				<title>When a user enters a invalid password, that validation message should be shown to the user: “Entered Invalid password! Check your keyboard layout or Caps Lock. Send a one-time password to your email?”</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C70</id>
+				<title>The user is able to redirect to the Forgot password page by clicking on the Send one-time password link.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>[Sign in] button</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C57</id>
+				<title>The user is able to log in by clicking the [Sign In] button with filled required fields.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C58</id>
+				<title>The user is able to log in by pressing an Enter button with filled required fields.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+			<section>
+		<name>&quot;Need an account?&quot; link</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C55</id>
+				<title>User should be redirected to the Sign Up page after clicking on &quot;Need an account?&quot; link</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C56</id>
+				<title>User should be redirected to the Forgot password page after click on &quot;Forgot password&quot; link</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+			<section>
+		<name>Sign Up page</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C8</id>
+				<title>The User is should be able to go on the Sign Up page</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+								<sections>
+		<section>
+		<name>&quot;Sign up&quot; form</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C6</id>
+				<title>Users should not be able to finish registration without email verification.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C7</id>
+				<title>A user should be redirected to the &quot;Finish Registration&quot; page after successful registration.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C52</id>
+				<title>The user should be able to complete registration by entering a valid 6-digit code.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C53</id>
+				<title>The user should not be able to complete registration by entering a invalid 6-digit code.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+								<sections>
+		<section>
+		<name>&quot;Username&quot; field</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C9</id>
+				<title>The user cannot register by entering 2 symbols in the username field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C10</id>
+				<title>The user can register by entering 3 symbols in the username field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C11</id>
+				<title>The user can register by entering 4 symbols in the username field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C12</id>
+				<title>The user can register by entering 39 symbols in the username field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C13</id>
+				<title>The user can register by entering 40 symbols in the username field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C14</id>
+				<title>The user cannot register by entering 41 symbols in the username field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C15</id>
+				<title>The Username field should not accept the already registered Username</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C16</id>
+				<title>The user should not be able to sign up without filling in the Username field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C17</id>
+				<title>The Username field should be able to contain number</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C18</id>
+				<title>The Username field should not accept value without Latin letters</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C19</id>
+				<title>The Username field should not accept values that do not start with a letter.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C20</id>
+				<title>The Username field should not accept value with special characters</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C21</id>
+				<title>The Username field should not accept value with non-printing symbol</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C46</id>
+				<title>When a user enters a username that is already taken, that validation message should be shown to the user: “This username is taken.”</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C47</id>
+				<title>When a user enters a non-valid username, that validation message should be shown to the user: “Username must start with a letter, have no spaces, and be 3 - 40 characters.”</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>&quot;Email&quot; field</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C22</id>
+				<title>The user should not be able to sign up without filling in the Email field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C23</id>
+				<title>The Email field should not accept the already registered Email</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C24</id>
+				<title>The [name] part on Email field should be able to contain Latin letters</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C25</id>
+				<title>The [name] part on Email field should be able to contain digits</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C26</id>
+				<title>The [name] part on Email field should be able to contain plus (+).</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C27</id>
+				<title>The [name] part on Email field should be able to contain hyphen (-)</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C28</id>
+				<title>The [name] part on Email field should be able to contain underline (_).</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C29</id>
+				<title>The [name] part on Email field should be able to contain dot (.).</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C30</id>
+				<title>The [name] part on Email field should not be able to contain bang (!).</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C31</id>
+				<title>User is not able to sign up using an invalid email form</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C48</id>
+				<title>When a user enters a email that is already taken, that validation message should be shown to the user: “This email is taken. Want to log in?”</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C49</id>
+				<title>When a user enters a non-valid email, that validation message should be shown to the user: “This email does not seem valid.”</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Low</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>&quot;Password&quot; field</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C32</id>
+				<title>The user should not be able to sign up without filling in the Password field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C33</id>
+				<title>The user cannot register by entering 7 symbols in the password field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C34</id>
+				<title>The user can register by entering 8 symbols in the password field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C35</id>
+				<title>The user can register by entering 9 symbols in the password field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C37</id>
+				<title>The user can register by entering 30 symbols in the password field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C38</id>
+				<title>The user cannot register by entering 31 symbols in the password field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C40</id>
+				<title>The Password field should not accept value without digits</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C41</id>
+				<title>The Password field should not accept value without special character</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C42</id>
+				<title>The Password field should not accept value without capital letter</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C43</id>
+				<title>The user should not be able to sign up without filling in the Confirm Password field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C44</id>
+				<title>The confirm password field should not accept values different from the password field</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C50</id>
+				<title>When a user enters a non-valid password, that validation message should be shown to the user: “Password can’t be blank. Password should contain at least one capital letter, one number, and one special character.”</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C36</id>
+				<title>The user can register by entering 29 symbols in the password field.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C39</id>
+				<title>The Password field should not accept value with non-printing symbol</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>[Sign up] button</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C45</id>
+				<title>The user is able to finish registration by clicking the [Sign Up] button with filled required fields.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+															<case>
+				<id>C51</id>
+				<title>The user is able to finish registration by pressing Enter with filled required fields.</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+			<section>
+		<name>&quot;Have an account?&quot; link</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C4</id>
+				<title>The User is able to redirect to the sign in page</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																												<custom>
+											<automation_type><id>0</id><value> None</value></automation_type>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+			<section>
+		<name>Article page</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Article header</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Article title</name>
+		<description></description>
+									</section>
+			<section>
+		<name>“User profile” link</name>
+		<description></description>
+									</section>
+			<section>
+		<name>Date of posting</name>
+		<description></description>
+									</section>
+			<section>
+		<name>[Follow :username:] button</name>
+		<description></description>
+									</section>
+			<section>
+		<name>[Favourite Article] button</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+			<section>
+		<name>Article text</name>
+		<description></description>
+									</section>
+			<section>
+		<name>Tags</name>
+		<description></description>
+									</section>
+			<section>
+		<name>Comments</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Comment text</name>
+		<description></description>
+									</section>
+			<section>
+		<name>User profile link</name>
+		<description></description>
+									</section>
+			<section>
+		<name>Date of posting</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+	</sections>
+			</section>
+			<section>
+		<name>User page</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>User banner</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>User icon</name>
+		<description></description>
+									</section>
+			<section>
+		<name>Username</name>
+		<description></description>
+									</section>
+			<section>
+		<name>[Follow :username:] button</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+			<section>
+		<name>My posts</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Article preview</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+			<section>
+		<name>Favorited posts</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Article preview</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+	</sections>
+			</section>
+	</sections>
+			</section>
+			<section>
+		<name>Logged in user</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Home page</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Your Feed</name>
+		<description></description>
+									</section>
+			<section>
+		<name>Global Feed</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Article preview</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>‘User profile’ link</name>
+		<description></description>
+									</section>
+			<section>
+		<name>[Like]  button</name>
+		<description></description>
+									</section>
+			<section>
+		<name>Article title</name>
+		<description></description>
+									</section>
+			<section>
+		<name>Article description</name>
+		<description></description>
+									</section>
+			<section>
+		<name>‘Read more…’ link</name>
+		<description></description>
+									</section>
+			<section>
+		<name>Tags</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+			<section>
+		<name>Pagination</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+			<section>
+		<name>Popular tags</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Tag</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+	</sections>
+			</section>
+			<section>
+		<name>New Article page</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>‘New Article’ form</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>‘Article Title’ field</name>
+		<description></description>
+									</section>
+			<section>
+		<name>‘What&apos;s this article about?’ field</name>
+		<description></description>
+									</section>
+			<section>
+		<name>‘Write your article (in mark down)’ textarea</name>
+		<description></description>
+									</section>
+			<section>
+		<name>&apos;Enter tags’ field</name>
+		<description></description>
+									</section>
+			<section>
+		<name>[Publish Article] button</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+	</sections>
+			</section>
+			<section>
+		<name>Settings page</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>‘Your Settings’ form</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>‘URL of profile picture’ field</name>
+		<description></description>
+									</section>
+			<section>
+		<name>‘Nickname’ field</name>
+		<description></description>
+									</section>
+			<section>
+		<name>&apos;Short bio about you’ textarea</name>
+		<description></description>
+									</section>
+			<section>
+		<name>‘Email’ field</name>
+		<description></description>
+									</section>
+			<section>
+		<name>‘New Password’ field</name>
+		<description></description>
+									</section>
+			<section>
+		<name>[Update Settings] button</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+			<section>
+		<name>[Or click here to logout] button</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+			<section>
+		<name>User page</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>User banner</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>User icon</name>
+		<description></description>
+									</section>
+			<section>
+		<name>Username</name>
+		<description></description>
+									</section>
+			<section>
+		<name>[Edit Profile Settings] button</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+			<section>
+		<name>My Posts</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Article preview</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+			<section>
+		<name>Favorited Posts</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+			<section>
+		<name>Article page</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Article header</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Article title</name>
+		<description></description>
+									</section>
+			<section>
+		<name>‘User profile’ link</name>
+		<description></description>
+									</section>
+			<section>
+		<name>Date of posting</name>
+		<description></description>
+									</section>
+			<section>
+		<name>[Edit Article] button</name>
+		<description></description>
+									</section>
+			<section>
+		<name>[Delete Article] button</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+			<section>
+		<name>Article Body</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Article text</name>
+		<description></description>
+									</section>
+			<section>
+		<name>Tags</name>
+		<description></description>
+									</section>
+			<section>
+		<name>‘User profile’ link</name>
+		<description></description>
+									</section>
+			<section>
+		<name>Date of posting</name>
+		<description></description>
+									</section>
+			<section>
+		<name>[Edit Article] button</name>
+		<description></description>
+									</section>
+			<section>
+		<name>[Delete Article] button</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+			<section>
+		<name>‘Comment’ form</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>‘Comment’ textarea</name>
+		<description></description>
+									</section>
+			<section>
+		<name>User icon</name>
+		<description></description>
+									</section>
+			<section>
+		<name>[Post Comment] button</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+			<section>
+		<name>Comments</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Text</name>
+		<description></description>
+									</section>
+			<section>
+		<name>User icon</name>
+		<description></description>
+									</section>
+			<section>
+		<name>‘User profile’ link</name>
+		<description></description>
+									</section>
+			<section>
+		<name>Date of posting</name>
+		<description></description>
+									</section>
+			<section>
+		<name>[Delete] button</name>
+		<description></description>
+									</section>
+	</sections>
+			</section>
+	</sections>
+			</section>
+	</sections>
+			</section>
+	</sections>
+</suite>
